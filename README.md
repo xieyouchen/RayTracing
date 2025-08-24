@@ -30,7 +30,9 @@
 
 
 <figure>
-    <img src=".\README.assets\image-20250824141018249.png"/>
+    <!-- <img src=".\README.assets\image-20250824141018249.png" width="95%"/>
+     -->
+    <img src=".\README.assets\image-20250824141018249.png" width="90%"/>
 </figure>
 
 <div style="text-align: center;">
