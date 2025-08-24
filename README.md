@@ -1,16 +1,44 @@
 # Walnut: 支持多线程光线追踪渲染器的Vulkan可视化框架
 
-[TOC]
+- [Walnut: 支持多线程光线追踪渲染器的Vulkan可视化框架](#walnut-支持多线程光线追踪渲染器的vulkan可视化框架)
+  - [一、项目概述](#一项目概述)
+  - [二、项目架构设计](#二项目架构设计)
+    - [1. 光线追踪模块](#1-光线追踪模块)
+      - [1.1 Camera（相机系统）](#11-camera相机系统)
+      - [1.2 Renderer（渲染器）](#12-renderer渲染器)
+      - [1.3 Scene（场景管理）](#13-scene场景管理)
+      - [1.4 Ray（光线与交点信息）](#14-ray光线与交点信息)
+      - [1.5 Utils（工具库）](#15-utils工具库)
+    - [2. Walnut 框架集成](#2-walnut-框架集成)
+      - [2.1 Application 模块（框架核心）](#21-application-模块框架核心)
+      - [2.2 Vulkan 渲染封装](#22-vulkan-渲染封装)
+      - [2.3 ImGui 即时界面](#23-imgui-即时界面)
+      - [2.4 Layer 系统](#24-layer-系统)
+  - [三、技术实现](#三技术实现)
+  - [三、技术实现亮点](#三技术实现亮点)
+  - [四、性能与可扩展性分析](#四性能与可扩展性分析)
+    - [✅ 优势](#-优势)
+    - [⚠️ 不足](#️-不足)
+  - [五、技术栈总结](#五技术栈总结)
+  - [六、总结与展望](#六总结与展望)
+  - [七、附加：核心代码片段](#七附加核心代码片段)
+    - [1. 光线生成与方向计算（Camera）](#1-光线生成与方向计算camera)
+    - [2. 多线程路径追踪（Renderer）](#2-多线程路径追踪renderer)
+    - [3. 单像素路径追踪（PerPixel）](#3-单像素路径追踪perpixel)
+  - [八、About](#八about)
+  - [九、Getting Started](#九getting-started)
 
-<center>
-    <figure>
-        <img src=".\README.assets\image-20250824141018249.png"/>
-    </figure>
-    <figure>
-        <img src=".\README.assets\image-20250824141334998.png/">
-        <img src=".\README.assets\image-20250824141043200.png"/>
-	</figure>
-</center>
+
+<figure>
+    <img src=".\README.assets\image-20250824141018249.png"/>
+</figure>
+
+<div style="text-align: center;">
+  <img src=".\README.assets\image-20250824141334998.png" width="45%" />
+  <img src=".\README.assets\image-20250824141043200.png" width="45%" />
+</div>
+
+
 
 ## 一、项目概述
 
